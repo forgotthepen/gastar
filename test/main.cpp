@@ -31,7 +31,7 @@ void draw() {
       } else if (0 == col_val) {
         tile = '#';
       } else if (2 == col_val) {
-        tile = '|';
+        tile = '\\';
       }
       std::cout << tile << ' ';
     }
@@ -195,7 +195,7 @@ int main() {
         *point = 2;
         std::cout << "\n\n";
         draw();
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
       });
     } else {
       throw std::runtime_error("path not solved!");
